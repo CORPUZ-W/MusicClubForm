@@ -1,110 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
   <meta charset="UTF-8">
   <title>Form Layout</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Georgia, 'Times New Roman', Times, serif;
     }
-
     .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .left-section img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+    }
+    .right-section p {
+      font-size: 14px;
+      text-align: justify;
+    }
+    form {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+    }
+    .form-left, .form-right {
       display: flex;
       flex-direction: column;
+      gap: 15px;
+    }
+    .form-left label {
+      display: flex;
       align-items: center;
-      padding: 20px;
     }
-
-    .top-section {
-      display: flex;
-      width: 90%;
-      margin-bottom: 20px;
+    .form-left label span {
+      width: 120px;
+      display: inline-block;
     }
-
-    .top-section img {
-      width: 200px;
-      height: auto;
-      margin-right: 20px;
-    }
-
-    .form-section {
-      display: flex;
-      justify-content: space-between;
-      width: 90%;
-    }
-
-    .left-form, .right-form {
-      width: 45%;
-    }
-
-    .left-form label {
-      display: block;
-      margin: 10px 0 5px;
-    }
-
-    .left-form input[type="text"], .left-form input[type="email"] {
-      width: 100%;
+    input[type="text"] {
+      width: 250px;
       padding: 5px;
-      border: 1px solid #000;
     }
-
-    .right-form .gender, .right-form .hobbies {
-      margin-top: 20px;
+    .form-right label {
+      font-weight: bold;
     }
-
-    .gender label, .hobbies label {
-      display: block;
-      margin: 5px 0;
+    .form-right div {
+      margin-left: 20px;
     }
-
   </style>
 </head>
 <body>
-<h1><strong>Music Club Form</strong</h1>
+<h1><strong>Music Club Form</strong></h1>
   <div class="container">
-    <!-- Top Section -->
-    <div class="top-section">
-      <a href="https://ibb.co/4wgFW1Qd"><img src="https://i.ibb.co/XfkWXYw8/music-logo-music-brand-logo-modern-music-icon-design-template-7bfc357b3c2ea133f9efcb43b08c5f6d-scree.jpg" alt="music-logo-music-brand-logo-modern-music-icon-design-template-7bfc357b3c2ea133f9efcb43b08c5f6d-scree" width="800" height="200" Style="border: 5px solid black; magrin-right: 10px; "width="100"</a> <br>
-      
-      <p><strong>If you have a love for music and a desire to connect with others who share your passion, then our Music Club is the perfect place for you! Join us today to explore different genres, participate in fun events, learn new skills, and become part of a vibrant community where every beat brings people together.</strong>
+    <!-- Left Section -->
+    <div class="left-section">
+      <img src="a href="https://ibb.co/4wgFW1Qd"><img src="https://i.ibb.co/XfkWXYw8/music-logo-music-brand-logo-modern-music-icon-design-template-7bfc357b3c2ea133f9efcb43b08c5f6d-scree.jpg" alt="music-logo-music-brand-logo-modern-music-icon-design-template-7bfc357b3c2ea133f9efcb43b08c5f6d-scree" width="200" height="200" Style="border: 5px solid black; magrin-right: 5px;></a>
+    <div class="right-section">
+      <p>
+        If you have a love for music and a desire to connect with others who share your passion, then our Music Club is the perfect place for you! Join us today to explore different genres, participate in fun events, learn new skills, and become part of a vibrant community where every beat brings people together.      </p>
+    </div>
+  </div
+
+  <form class="container">
+    <!-- Form Left Section -->
+    <div class="form-left">
+      <label><span>Name:</span> <input type="text" name="name"></label>
+      <label><span>Address:</span> <input type="text" name="address"></label>
+      <label><span>Email-Ad:</span> <input type="text" name="email"></label>
+      <label><span>Contact Number:</span> <input type="text" name="contact"></label>
     </div>
 
-    <!-- Form Section -->
-    <div class="form-section">
-      <!-- Left Side -->
-      <div class="left-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name">
-
-        <label for="address">Address:</label>
-        <input type="text" id="address">
-
-        <label for="email">Email-Ad:</label>
-        <input type="email" id="email">
-
-        <label for="contact">Contact Number:</label>
-        <input type="text" id="contact">
+    <!-- Form Right Section -->
+    <div class="form-right">
+      <label>Gender:</label>
+      <div>
+        <label><input type="radio" name="gender" value="male"> Male</label><br>
+        <label><input type="radio" name="gender" value="female"> Female</label>
       </div>
 
-      <!-- Right Side -->
-      <div class="right-form">
-        <div class="gender">
-          <strong>Gender:</strong><br>
-          <label><input type="radio" name="gender"> Male</label>
-          <label><input type="radio" name="gender"> Female</label>
-        </div>
-
-        <div class="hobbies">
-          <strong>Music Experience:</strong><br>
-          <label><input type="checkbox"> Singing</label>
-          <label><input type="checkbox"> Drumming</label>
-          <label><input type="checkbox"> Playing piano</label>
-          <label><input type="checkbox"> Playing guitar</label>
-          <label><input type="checkbox"> Playing violin</label>
-        </div>
+      <label>Music Experience:</label>
+      <div>
+        <label><input type="checkbox" name="hobby" value="swimming"> Singing</label><br>
+        <label><input type="checkbox" name="hobby" value="biking"> Drumming</label><br>
+        <label><input type="checkbox" name="hobby" value="reading"> Play guitar</label><br>
+        <label><input type="checkbox" name="hobby" value="tv"> play piano</label><br>
+        <label><input type="checkbox" name="hobby" value="playing"> Playing violin</label>
       </div>
     </div>
-  </div>
+  </form>
 
 </body>
 </html>
