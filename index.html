@@ -5,26 +5,31 @@
   <title>Form Layout</title>
 </head>
 <body>
+  
 <h1><strong>Music Club Form</strong></h1>
   <div class="container">
     <!-- Left Section -->
-    <div class="left-section">
-      <img src="a href="https://ibb.co/4wgFW1Qd"><img src="https://i.ibb.co/XfkWXYw8/music-logo-music-brand-logo-modern-music-icon-design-template-7bfc357b3c2ea133f9efcb43b08c5f6d-scree.jpg" alt="music-logo-music-brand-logo-modern-music-icon-design-template-7bfc357b3c2ea133f9efcb43b08c5f6d-scree" width="200" height="200" Style="border: 5px solid black; magrin-right: 5px;></a>
+    <a href="https://ibb.co/jv8L2Y00"><img src="https://i.ibb.co/Z6fhPr44/music-club-neon-logo-sign-emblem-symbol-poster-118419-90.jpg" height="300" width="300" alt="music-club-neon-logo-sign-emblem-symbol-poster-118419-90" border="0"></a>
     <div class="right-section">
-      <p>
-        If you have a love for music and a desire to connect with others who share your passion, then our Music Club is the perfect place for you! Join us today to explore different genres, participate in fun events, learn new skills, and become part of a vibrant community where every beat brings people together.      </p>
-    </div>
-  </div
-
-  <form class="container">
-    <!-- Form Left Section -->
-    <div class="form-left">
-      <label><span>Name:</span> <input type="text" name="name"></label>
-      <label><span>Address:</span> <input type="text" name="address"></label>
-      <label><span>Email-Ad:</span> <input type="text" name="email"></label>
-      <label><span>Contact Number:</span> <input type="text" name="contact"></label>
-    </div>
-
+      
+      <p style="vertical-align:top;">If you have a love for music and a desire to connect with others who share your passion, then our Music Club is the perfect place for you! Join us today to explore different genres, participate in fun events, learn new skills, and become part of a vibrant community where every beat brings people together.</p>
+    
+  <div class="form-group">
+    <styllabel for="firstname">FULL NAME:</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Enter your fname">
+  </div>
+  <div class="form-group">
+    <label for="firstname">ADDRESS:</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Enter your Address">
+  </div>
+  <div class="form-group">
+    <label for="firstname">EMAIL-ADD:</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Enter your Email">
+  </div>
+   <div class="form-group">
+    <label for="firstname">CONTACT NUMBER:</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Enter your Number">
+  </div>
     <!-- Form Right Section -->
     <div class="form-right">
       <label>Gender:</label>
@@ -41,8 +46,10 @@
         <label><input type="checkbox" name="hobby" value="tv"> play piano</label><br>
         <label><input type="checkbox" name="hobby" value="playing"> Playing violin</label>
       </div>
-    </div>
   </form>
-
+<form action="submit_page.php" method="post">
+  <input type="submit" value="Submit">
+  <input type="Reset" value="Reset">
+</form>
 </body>
-</html>
+    </html>
